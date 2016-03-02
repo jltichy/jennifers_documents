@@ -22,24 +22,29 @@ use this often to see if files have been added or deleted or if changes have bee
 
 git add
 adds files; example:
+
 git add octocat.txt
 to add a file called octocat
 
 git add
 can also be used with wildcards; example:
+
 git add '*.txt'
 to add all files that end in .txt
 
 git remote add
 creates a remote repository at GitHub where we can send our local repository; example:
+
 git remote add origin https://github.com/try-git/try_git.git
 in this example, the name of the remote repository is origin
 
 git commit
 submits the changes to the repository; example:
+
 git commit -m "Add cute octocat story"
 to commit the changes and to make a comment (that's what the -m does)
 example:
+
 git commit -m "Remove all the cats"
 
 git log
@@ -48,14 +53,17 @@ it's more comprehensive than git status (git status only tells you of the most r
 
 git push
 this sends the local repository to GitHub; example:
+
 git push -u origin master
 the -u tells git to remember the parameters, origin is the name of the remote repository, and master is the default branch where we're sending this
 another example:
+
 git push
 will push the work back to the remote repository on GitHub
 
 git pull
 use this command after some time to see changes that you or other users have made; example:
+
 git pull origin master
 origin is the name of the remote repository on GitHub and master is the default branch from GitHub
 
@@ -68,34 +76,42 @@ this command asks for the differences since the last commit, and only asks for t
 
 git reset
 will remove files from the staging area if necessary; example:
+
 git reset octofamily/octodog.txt
 this command will take octodog.txt out of being staged for octofamily (the file is still there; it just won't be committed)
 
 git checkout
 resets the repository back to the last commit; example:
+
 git checkout -- octocat.txt
 example:
+
 git checkout clean_up
 switches back to the clean_up branch
 example:
+
 git checkout master
 switches back to the master branch
 
 git branch clean_up
 code to merge the branches back into the master branch; example:
+
 git branch clean_up
 
 git branch
 tells you the names of the current branches
 can be used as is, or like this:
+
 git branch -d clean_up
 this will delete the branch called clean_up (since that branch is now merged with the master branch)
 
 git rm
 will remove files (including those in staging); example:
+
 git rm '*.txt'
 
 git merge
 will merge the files back into master; example:
+
 git merge clean_up
 will merge the clean_up branch with the master branch
